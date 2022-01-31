@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Rendering info
 
-You can use the [editor on GitHub](https://github.com/Snowball2012/fridge/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Books
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[PBR Book](https://www.pbr-book.org/) - offline path tracer implementation in the form of a book. Provides deep insights into ray tracing, physics and maths behind it.
 
-### Markdown
+## Unreal Engine
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [Global shaders in Unreal without engine modification](https://itscai.us/blog/post/ue-view-extensions/) - Despite the title, the post mainly focuses on SceneViewExtensions, a way to hook into the Unreal rendering pipeline without the need to modify engine source code. You can override SubscribeToPostProcessingPass to hook into the middle of the post processing pipeline. Also note that FSceneView inside a post processing pass does not account for screen percentage, so it's better to get target viewports for passes directly from render targets
 
-```markdown
-Syntax highlighted code block
+- [UE5 Lumen Implementation Analysis](https://blog.en.uwa4d.com/2022/01/25/ue5-lumen-implementation-analysis/) - Good breakdown of the Lumen algorithms. Can't really guide you through the actual code.
 
-# Header 1
-## Header 2
-### Header 3
+## Useful resources
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Snowball2012/fridge/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- [Jendrik Illner's Graphics Programming weekly](https://www.jendrikillner.com/#posts) - An excellent weekly digest of everything that happens in the realtime cg world.
+- [Technically Art](https://halisavakis.com/category/technically-art/) - Graphics Programming weekly, but for technical art. Less posts and articles, more tweets and gifs.
