@@ -21,6 +21,14 @@
   - Albedo per instance (!). Color bleeding is really visible if sampled very close to ray origin -> most likely will be captured with a screen trace
   - Extract dominant direction from SH. Then fake uniform light distribution by increasing roughness, then use single BRDF sample with corrected roughness and dominant SH direction
 
+## Denoising
+
+- [ReBLUR](https://www.springerprofessional.de/en/reblur-a-hierarchical-recurrent-denoiser/19538328) - Non-ML denoiser
+  - Generate mip chain for pixels that fail temporal reprojection
+  - Reccurent blur (noisy input with blurred history)
+  - Separate specular and diffuse, they have different kernels and filtering space
+  - Bilateral, use roughness, tangent plane distance and specular lobe params for weights
+
 ## Useful resources
 
 - [Jendrik Illner's Graphics Programming weekly](https://www.jendrikillner.com/#posts) - An excellent weekly digest of everything that happens in the realtime cg world.
