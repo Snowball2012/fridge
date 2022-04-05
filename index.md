@@ -10,6 +10,17 @@
 
 - [UE5 Lumen Implementation Analysis](https://blog.en.uwa4d.com/2022/01/25/ue5-lumen-implementation-analysis/) - Good breakdown of the Lumen algorithms. Can't really guide you through the actual code.
 
+## Raytracing
+
+- [RTGI in Metro Exodus](https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9985-exploring-ray-traced-future-in-metro-exodus.pdf) - Key takeaways:
+  - Use simpler lods for BLAS (Metro has ~4x times simpler geometry for blas)
+  - Rebuild TLAS from scratch every frame (doing otherwise affects raytracing performance a lot)
+  - ~1GB for acceleration structures
+  - Do some extra stuff in raygen shader to hide latency (raymarch terrain heightmap for example, or it can be basically anything else, because TraceRay has a HUGE latency)
+  - Don't store ray info for each pixel, reconstruct it in later passes
+  - Albedo per instance (!). Color bleeding is really visible if sampled very close to ray origin -> most likely will be captured with a screen trace
+  - Extract dominant direction from SH. Then fake uniform light distribution by increasing roughness, then use single BRDF sample with corrected roughness and dominant SH direction
+
 ## Useful resources
 
 - [Jendrik Illner's Graphics Programming weekly](https://www.jendrikillner.com/#posts) - An excellent weekly digest of everything that happens in the realtime cg world.
