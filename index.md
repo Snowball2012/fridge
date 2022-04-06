@@ -29,6 +29,10 @@
   - Separate specular and diffuse, they have different kernels and filtering space
   - Bilateral, use roughness, tangent plane distance and specular lobe params for weights
 
+## Math
+
+- [Stupid Spherical Harmonics (SH) Tricks](http://www.ppsloan.org/publications/StupidSH36.pdf) - good introduction to SH
+
 ## Useful resources
 
 - [Jendrik Illner's Graphics Programming weekly](https://www.jendrikillner.com/#posts) - An excellent weekly digest of everything that happens in the realtime cg world.
