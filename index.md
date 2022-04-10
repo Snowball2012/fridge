@@ -21,12 +21,25 @@
   - Albedo per instance (!). Color bleeding is really visible if sampled very close to ray origin -> most likely will be captured with a screen trace
   - Extract dominant direction from SH. Then fake uniform light distribution by increasing roughness, then use single BRDF sample with corrected roughness and dominant SH direction
 
+- [Hybrid Raytracing in Far Cry 6](https://www.youtube.com/watch?v=nTZpKD600eQ)
+  - Separate ray gen from HW raytracing. Allows to classify screen tiles by complexity and only HW raytrace areas which needs raytraced reflections (puddles in front of the player mostly)
+  - Use different screen-space tracing methods for mirror and glossy reflections (linear high-quality tracing for mirror, Hi-Z cone tracing for glossy)
+  - Async compute for blas/tlas generation
+  - Put only near geometry in TLAS
+  - Use compute shaders for BLAS vertex generation, geometry pipeline is excessive and has vertex cache misses
+  - Per-vertex lighting for raytraced reflections. Vertex buffers for lighting are generated beforehand and placed in a global buffer to reduce shader tables. FC6 uses only one shader table (1 hit shader and 1 empty miss shader). Metro Exodus GI has a similar idea (but stores only albedo per instance)
+  - Multiple shaders in shader tables cause a lot of divergence. Avoid them if possible
+  - There may be a problem when switching from HW raytracing to SSR for a tile. So don't switch to SSR if previous 2 frames used DXR for the tile. To avoid DXR takeover you can just turn DXR off for random tile pixels over time. This allows to gracefully blend 2 methods:
+<img width="924" alt="fc6-raytracing-method-switch" src="https://user-images.githubusercontent.com/2443670/162637915-53f0b5c5-5ca6-45bd-9ea7-8218e2c0f926.png">
+  - [Example with source code](https://gpuopen.com/learn/hybrid-reflections/)
+
 ## Denoising
 
 - [ReBLUR](https://www.springerprofessional.de/en/reblur-a-hierarchical-recurrent-denoiser/19538328) - Non-ML denoiser
   - Generate mip chain for pixels that fail temporal reprojection
   - Reccurent blur (noisy input with blurred history)
   - Separate specular and diffuse, they have different kernels and filtering space
+
   - Bilateral, use roughness, tangent plane distance and specular lobe params for weights
 
 ## Math
