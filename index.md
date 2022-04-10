@@ -22,6 +22,7 @@
   - Extract dominant direction from SH. Then fake uniform light distribution by increasing roughness, then use single BRDF sample with corrected roughness and dominant SH direction
 
 - [Hybrid Raytracing in Far Cry 6](https://www.youtube.com/watch?v=nTZpKD600eQ)
+  - [Example with source code](https://gpuopen.com/learn/hybrid-reflections/)
   - Separate ray gen from HW raytracing. Allows to classify screen tiles by complexity and only HW raytrace areas which needs raytraced reflections (puddles in front of the player mostly)
   - Use different screen-space tracing methods for mirror and glossy reflections (linear high-quality tracing for mirror, Hi-Z cone tracing for glossy)
   - Async compute for blas/tlas generation
@@ -31,7 +32,6 @@
   - Multiple shaders in shader tables cause a lot of divergence. Avoid them if possible
   - There may be a problem when switching from HW raytracing to SSR for a tile. So don't switch to SSR if previous 2 frames used DXR for the tile. To avoid DXR takeover you can just turn DXR off for random tile pixels over time. This allows to gracefully blend 2 methods:
 <img width="924" alt="fc6-raytracing-method-switch" src="https://user-images.githubusercontent.com/2443670/162637915-53f0b5c5-5ca6-45bd-9ea7-8218e2c0f926.png">
-  - [Example with source code](https://gpuopen.com/learn/hybrid-reflections/)
 
 ## Denoising
 
