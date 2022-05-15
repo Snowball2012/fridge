@@ -42,9 +42,26 @@
 
   - Bilateral, use roughness, tangent plane distance and specular lobe params for weights
 
+## Deferred texturing
+
+- [Short review of current visibility buffer techniques](/resources/DeferredTexturing.pptx)
+- [Deferred Texturing in Dawn Engine](https://www.eidosmontreal.com/news/deferred-next-gen-culling-and-rendering-for-dawn-engine/)
+  - Fat VBuffer (4x32bit)
+  - Has extra info for lighting (TBN, vertex normals for better SSAO and easy anisotropy)
+  - No GBuffer
+  - Almost no vertex attributes (1 UV channel and that's it)
+- [Geometry Rendering Pipeline At Activision](https://www.youtube.com/watch?v=NoTUzzmxPo0)
+  - Hybrid. Meshes can be rendered with either F+ or V+ depending on geo density and number of attributes
+  - Indexing is disabled to get triangleID
+  - Only 2 32bit VBuffers (1 for most geo, seconds is used only for implicit geo like foliage and deformables)
+  - Uses Z-test trick to shade materials
+  - Reconstructs full triangle
+
 ## Math
 
 - [Stupid Spherical Harmonics (SH) Tricks](http://www.ppsloan.org/publications/StupidSH36.pdf) - good introduction to SH
+
+- [Sampling the hemisphere](https://alexanderameye.github.io/notes/sampling-the-hemisphere/) - several hemisphere sampling derivations. Cone sampling can be derived easily from this
 
 ## Useful resources
 
