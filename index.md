@@ -44,7 +44,7 @@
 
 ## Deferred texturing
 
-- [Short review of current visibility buffer techniques](/resources/DeferredTexturing.pptx)
+- [Short review of current visibility buffer techniques](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/DeferredTexturing.pptx?raw=true)
 - [Deferred Texturing in Dawn Engine](https://www.eidosmontreal.com/news/deferred-next-gen-culling-and-rendering-for-dawn-engine/)
   - Fat VBuffer (4x32bit)
   - Has extra info for lighting (TBN, vertex normals for better SSAO and easy anisotropy)
