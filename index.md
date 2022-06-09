@@ -56,6 +56,15 @@
   - Only 2 32bit VBuffers (1 for most geo, seconds is used only for implicit geo like foliage and deformables)
   - Uses Z-test trick to shade materials
   - Reconstructs full triangle
+  
+## SSR
+- [Stochastic Screen-Space Reflections (SIGGRAPH 2015)] (https://www.youtube.com/watch?v=AzXEao-WKRc)
+  - conceptually 2 passes (1 rpp, importance sample ggx, store intersection point, resolve on the second pass, reusing neighbour rays)
+  - resolve 4 pixel simultaneously
+  - raytrace in halfres, resolve in full res
+  - reproject virtual reflected points for temporal stability
+  - can pick best samples out of 4 for every pixel
+  - cone trace mip prev frame mip chain
 
 ## Math
 
