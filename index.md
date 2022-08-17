@@ -76,3 +76,4 @@
 
 - [Jendrik Illner's Graphics Programming weekly](https://www.jendrikillner.com/#posts) - An excellent weekly digest of everything that happens in the realtime cg world.
 - [Technically Art](https://halisavakis.com/category/technically-art/) - Graphics Programming weekly, but for technical art. Less posts and articles, more tweets and gifs.
+- [Physically Based](https://physicallybased.info/) - PBR material database. Any material can also be extracted as UE material graph
