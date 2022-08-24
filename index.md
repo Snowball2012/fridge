@@ -10,6 +10,8 @@
 
 - [UE5 Lumen Implementation Analysis](https://blog.en.uwa4d.com/2022/01/25/ue5-lumen-implementation-analysis/) - Good breakdown of the Lumen algorithms. Can't really guide you through the actual code.
 
+- [Journey to Lumen](https://knarkowicz.wordpress.com/2022/08/18/journey-to-lumen/) - Software raytracing methods analysis.
+
 ## Raytracing
 
 - [RTGI in Metro Exodus](https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/s9985-exploring-ray-traced-future-in-metro-exodus.pdf) - Key takeaways:
