@@ -80,3 +80,5 @@
 - [Technically Art](https://halisavakis.com/category/technically-art/) - Graphics Programming weekly, but for technical art. Less posts and articles, more tweets and gifs.
 - [Physically Based](https://physicallybased.info/) - PBR material database. Any material can also be extracted as UE material graph
 - [Krzysztof Narkowicz's blog](https://knarkowicz.wordpress.com/) - Graphics Programmer at Epic Games
+- [Zyanide's Lab](http://www.zyanidelab.com) - Raytraced Jedi Outcast notes. Lots of info on practical implementation of ReSTIR and ReGIR
+- [Pete Shirley's Graphics Blog](http://psgraphics.blogspot.com)
