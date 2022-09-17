@@ -18,23 +18,23 @@ In most scenes direct lighting is much more intensive than indirect bounces (may
 SSAO buffer (before blur):
 
 baseline:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_hbao.png)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_hbao.png?raw=true)
 optimized:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_hbao.png)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_hbao.png?raw=true)
 
 Resulting frame:
 
 baseline:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_frame.jpg)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_frame.jpg?raw=true)
 optimized:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_frame.jpg)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_frame.jpg?raw=true)
 
 Timings (1080p SSAO with 4k output on NVidia GTX 1080Ti):
 
 baseline:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_timings.png)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/classic_timings.png?raw=true)
 optimized:
-![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_timings.png)
+![](https://github.com/Snowball2012/fridge/blob/gh-pages/resources/ao_skip_direct_lit_areas/optimized_timings.png?raw=true)
 
 we can see 25% speedup in the main SSAO pass on a relatively well-lit outdoor scene, which is good for such a simple optimization
 
