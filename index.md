@@ -67,6 +67,10 @@
   - reproject virtual reflected points for temporal stability
   - can pick best samples out of 4 for every pixel
   - cone trace mip prev frame mip chain
+  
+## SSAO
+- [Skip SSAO on areas lit by direct lighting](https://snowball2012.github.io/fridge/2022/09/17/Skip_SSAO_on_areas_lit_by_direct_lighting.html)
+  - Simple optimization breakdown. May be beneficial on scenes with a lot of direct unoccluded lighting, but can be a poor fit for some lighting pipelines
 
 ## Math
 
